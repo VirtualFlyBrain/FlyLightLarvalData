@@ -14,8 +14,9 @@
     <div class="gallery">
     <% thumbnails.forEach(thumb => { %>
         <div class="thumbnail">
-            <a href="/images/<%= thumb.dir %>/<%= thumb.name.replace('.jpg', '.tif') %>"><img src="<%= thumb.path %>" alt="<%= thumb.name %>">
-            <br><%= thumb.name %></a>
+            <%= thumb.dir %><br>
+            <a href="/images/<%= thumb.dir %>/<%= thumb.name.replace('_G', '').replace('.jpg', '.tif') %>"><img src="<%= thumb.path %>" alt="<%= thumb.name %>">
+            <br><%= thumb.name.replace('.jpg', '').replace('_G', '') %></a>
         </div>
     <% }); %>
     </div>
