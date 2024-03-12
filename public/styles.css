@@ -16,7 +16,12 @@
 .thumbnail img {
   max-height: 200px; /* Limit image height */
   width: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the image covers the area, might crop */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.thumbnail img:hover {
+  transform: scale(1.5); /* Scale up the image size on hover */
+  z-index: 10; /* Ensure the image is above other elements */
 }
 
 .thumbnail a {
