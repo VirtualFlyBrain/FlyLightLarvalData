@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Index</title>
+</head>
+<body>
+    <form action="/" method="GET">
+        <input type="text" name="search" value="<%= searchQuery %>" placeholder="Search...">
+        <button type="submit">Search</button>
+    </form>
+    <div>
+        <% thumbnails.forEach(thumb => { %>
+            <div>
+                <img src="<%= thumb.path %>" alt="<%= thumb.name %>">
+                <p><%= thumb.name %></p>
+                <a href="/images/<%= thumb.dir %>/<%= thumb.name.replace('.jpg', '.tif') %>">Download TIFF</a>
+            </div>
+        <% }); %>
+    </div>
+</body>
+</html>
