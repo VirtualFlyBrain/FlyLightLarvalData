@@ -1,0 +1,24 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adjust the space between thumbnails */
+  justify-content: center;
+}
+
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thumbnail img {
+  max-height: 200px; /* Limit image height */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the area, might crop */
+}
+
+.thumbnail a {
+  text-decoration: none;
+  color: #007bff; /* Bootstrap primary blue, as an example */
+  margin-top: 5px;
+}
