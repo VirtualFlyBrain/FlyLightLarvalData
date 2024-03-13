@@ -4,13 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
-    <title>Image Index</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Janelia FlyLight Larval Raw Images</title>
 </head>
 <body>
-    <form action="/" method="GET">
-        <input type="text" name="search" value="<%= searchQuery %>" placeholder="Search...">
-        <button type="submit">Search</button>
-    </form>
+    <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+      <a class="navbar-brand" href="https://virtualflybrain.org"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">Virtual Fly Brain</span></a>
+      <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+        <ul class="navbar-nav mt-2 mt-lg-0">
+          <li class="nav-item mr-4 mb-2 mb-lg-0">
+            <a class="nav-link" href="https://v2.virtualflybrain.org/org.geppetto.frontend/geppetto" target="_blank"><span>Launch VFB</span><i class="fas fa-desktop ml-2"></i></a>
+          </li>
+          <li class="nav-item mr-4 mb-2 mb-lg-0">
+            <a class="nav-link" href="https://virtualflybrain.org/about/"><span>About</span></a>
+          </li>
+          <li class="nav-item mr-4 mb-2 mb-lg-0">
+            <a class="nav-link" href="https://virtualflybrain.org/docs/"><span>Documentation</span></a>
+          </li>
+          <li class="nav-item mr-4 mb-2 mb-lg-0">
+            <a class="nav-link active" href="https://virtualflybrain.org/blog/"><span class="active">Latest</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-nav d-none d-lg-block">
+        <div class="td-search">
+          <div class="td-search__icon"></div>
+          <form action="/" method="GET">
+            <input type="text" name="search" value="<%= searchQuery %>" placeholder="Search Images...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+      </div>
+    </nav>
+    <h1>Janelia FlyLight Larval Raw Images</h1>
+    
     <div class="gallery">
     <% thumbnails.forEach(thumb => { %>
         <div class="thumbnail">
