@@ -88,6 +88,34 @@ body {
     background-color: #f4f4f4;
 }
 
+h1 {
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Assuming you have a search input and nav items within the navbar */
+.navbar .search {
+    margin-right: 20px; /* Adjust as needed */
+}
+
+.td-navbar-nav-scroll {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.td-navbar-nav-scroll .search {
+    margin-left: auto; /* This pushes the search to the far right */
+}
+
+
 h1, h2, h3, h4, h5, h6 {
     color: #005A9C;
 }
