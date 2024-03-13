@@ -26,6 +26,19 @@
   z-index: 10; /* Ensure the image is above other elements */
 }
 
+h1 {
+  box-sizing: border-box
+  color: rgb(228, 204, 2)
+  display: block
+  font-family: "open sans", -apple-system, "system-ui", "segoe ui", Roboto, "helvetica neue", Arial, sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol"
+  font-size: 36px
+  font-weight: 700
+  height: 61.1875px
+  line-height: 43.2px
+  text-align: center
+  text-size-adjust: 100%
+}
+
 .thumbnail a {
   text-decoration: none;
   color: rgb(51, 153, 255);
