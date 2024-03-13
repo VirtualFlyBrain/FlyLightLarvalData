@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   gap: 10px; /* Adjust the space between thumbnails */
   justify-content: center;
+  background: black;
 }
 
 .thumbnail {
@@ -11,6 +12,7 @@
   align-items: center;
   border: solid;
   border-width: thin;
+  border-colour: white;
 }
 
 .thumbnail img {
