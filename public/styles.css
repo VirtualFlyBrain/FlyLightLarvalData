@@ -26,19 +26,6 @@
   z-index: 10; /* Ensure the image is above other elements */
 }
 
-h1 {
-  box-sizing: border-box;
-  color: rgb(228, 204, 2);
-  display: block;
-  font-family: "open sans", -apple-system, "system-ui", "segoe ui", Roboto, "helvetica neue", Arial, sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
-  font-size: 36px;
-  font-weight: 700;
-  height: 61.1875px;
-  line-height: 43.2px;
-  text-align: center;
-  text-size-adjust: 100%;
-}
-
 .thumbnail a {
   text-decoration: none;
   color: rgb(51, 153, 255);
@@ -93,5 +80,110 @@ h1 {
 
 .nav-link:hover {
     text-decoration: underline;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #005A9C;
+}
+
+a, a:visited {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Button styling */
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Container for content */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Navigation styling */
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: white;
+    padding: 0 20px;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+/* Grid layout for content */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+
+/* Tooltip styling */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 
