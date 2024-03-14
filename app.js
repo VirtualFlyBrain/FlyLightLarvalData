@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const imagesDirectory = '/images'; // Path inside the container
 
-app.get('/', (req, res) => {
+app.get('/explore', (req, res) => {
     const searchQuery = req.query.search?.toLowerCase() || '';
     let imageFiles = [];
 
@@ -36,9 +36,13 @@ app.get('/', (req, res) => {
 
 app.use('/images', express.static(imagesDirectory));
 
-app.get('/about-images', (req, res) => {
+app.get('/', (req, res) => {
   res.render('about-images', { title: "About Image Creation and Attribution" });
 });
+
+app.get('/about-images', (req, res) => {
+    res.render('about-images', { title: "About Image Creation and Attribution" });
+  });
 
 
 const PORT = process.env.PORT || 3000;

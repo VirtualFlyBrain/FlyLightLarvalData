@@ -21,7 +21,7 @@
                 <a class="nav-link" href="https://virtualflybrain.org/blog/1/01/01/janelia-flylight/"><span>FlyLight Project</span></a>
               </li>
               <li class="nav-item mr-4 mb-2 mb-lg-0">
-                <a class="nav-link" href="/"><span>Explore Larval Images</span></a>
+                <a class="nav-link" href="/explore"><span>Explore Larval Images</span></a>
               </li>
               <li class="nav-item mr-4 mb-2 mb-lg-0">
                 <a class="nav-link active" href="https://virtualflybrain.org/"><span class="active">VFB Docs</span></a>
@@ -48,9 +48,12 @@
         </section>
     </main>
 
-    <div role="button" tabindex="0" class="bigbutton">Open in VFB</div>
+    <footer style="align-content: center;">
+      <div role="button" tabindex="0" onclick="open('https://v2.virtualflybrain.org/org.geppetto.frontend/geppetto?q=VFB_00049000,AlignedDatasets');" class="bigbutton">Open L3 Datasets in VFB</div>
 
-    <div role="button" tabindex="0" class="bigbutton">Browse Original Images</div>
-    
+      <br>
+
+      <div role="button" tabindex="0" onclick="open('/explore');" class="bigbutton">Browse Original Images</div>
+    </footer>
 </body>
 </html>
