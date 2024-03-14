@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Image Creation and Attribution</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css"> <!-- Ensure correct path to your CSS file -->
+</head>
+<body>
+    <header class="site-header">
+        <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+      <a class="navbar-brand" href="https://virtualflybrain.org"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">Virtual Fly Brain</span></a>
+      <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+        <ul class="navbar-nav mt-2 mt-lg-0">
+          <li class="nav-item mr-4 mb-2 mb-lg-0">
+            <a class="nav-link" href="https://v2.virtualflybrain.org/org.geppetto.frontend/geppetto" target="_blank"><span>Launch VFB</span><i class="fas fa-desktop ml-2"></i></a>
+          </li>
+          <li class="nav-item mr-4 mb-2 mb-lg-0">
+            <a class="nav-link" href="https://virtualflybrain.org/about/"><span>About</span></a>
+          </li>
+          <li class="nav-item mr-4 mb-2 mb-lg-0">
+            <a class="nav-link" href="https://virtualflybrain.org/docs/"><span>Documentation</span></a>
+          </li>
+          <li class="nav-item mr-4 mb-2 mb-lg-0">
+            <a class="nav-link active" href="https://virtualflybrain.org/blog/"><span class="active">Latest</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-nav d-none d-lg-block">
+        <div class="td-search">
+          <div class="td-search__icon"></div>
+          <form action="/" method="GET">
+            <input type="text" name="search" value="<%= searchQuery %>" placeholder="Search Images...">
+                <button type="submit">Search</button>
+                <a href="/" class="clear-button">Clear</a>
+            </form>
+        </div>
+      </div>
+    </nav>
+    </header>
+    
+    <main>
+        <section class="content-section">
+            <h1>About Image Creation and Attribution</h1>
+            <p>This page provides information about the creation of images used on this website and their attributions.</p>
+            
+            <h2>Image Creation</h2>
+            <p>The data presented on this site are the work of the [Janelia FlyLight Project Team](http://janelia.org/team-project/fly-light), the [Descending Interneuron Project Team](https://www.janelia.org/project-team/fly-descending-interneuron), and the laboratories of [Gerald M. Rubin](http://www.janelia.org/lab/rubin-lab), [Yoshi Aso](http://www.janelia.org/lab/aso-lab), [Kristin Branson](http://www.janelia.org/lab/branson-lab), [Gwyneth Card](http://www.janelia.org/lab/card-lab), and [Barry Dickson](http://www.janelia.org/lab/dickson-lab).</p>
+
+            <p>The larval split-GAL4 line release includes 1020 split-GAL4 lines and 350 Generation 1 LexA lines selected for specific expression in the third-instar larval CNS ([see Figure 1 Supplemental file 1](https://doi.org/10.1101/2024.01.09.574419)).</p>
+            
+            <h2>Attributions</h2>
+            <p>You may use images from this website under a CC BY 4.0 license. Please acknowledge the FlyLight Project Team at Janelia Research Campus for the use of the images. Please also cite the paper below.</p>
+            
+            <p>In publications, please attribute the data presented on this site to the following paper (Split-GAL4 Omnibus Broad):<br>
+Meissner, G. W., Vannan, A., Jeter, J., Atkins, M., Bowers, S., Close, K., DePasquale, G. M., Dorman, Z., Forster, K., Beringer, J. A., Gibney, T. V., Gulati, A., Hausenfluck, J. H., He, Y., Henderson, K., Johnson, L., Johnston, R. M., Ihrke, G., Iyer, N., Lazarus, R., Lee, K., Li, H., Liaw, H., Melton, B., Miller, S., Motaher, R., Novak, A., Ogundeyi, O., Petruncio, A., Price, J., Protopapas, S., Tae, S., Tata, A., Taylor, J., Vorimo, R., Yarbrough, B., Zeng, K. X., Zugates, C. T., Dionne, H., Angstadt, C., Ashley, K., Cavallaro, A., Dang, T., Gonzalez, G. A., Hibbard, K. L., Huang, C., Kao, J., Laverty, T., Mercer, M., Perez, B., Pitts, S., Ruiz, D., Vallanadu, V., Zheng, G. Z., Goina, C., Otsuna, H., Rokicki, K., Svirskas, R. R., Cheong, H. S., Dolan, M., Ehrhardt, E., Feng, K., Galfi, B. E., Goldammer, J., Hu, N., Ito, M., McKellar, C., Minegishi, R., Namiki, S., Nern, A., Schretter, C. E., Sterne, G. R., Venkatasubramanian, L., Wang, K., Wolff, T., Wu, M., George, R., Malkesman, O., Aso, Y., Card, G. M., Dickson, B. J., Korff, W., Ito, K., Truman, J. W., Zlatic, M., Rubin, G. M. & FlyLight Project Team. A split-GAL4 driver line resource for Drosophila CNS cell types. bioRxiv. 2024: 2024.01.09.574419. DOI: [10.1101/2024.01.09.574419](https://doi.org/10.1101/2024.01.09.574419)</p>
+        </section>
+    </main>
+    
+</body>
+</html>
