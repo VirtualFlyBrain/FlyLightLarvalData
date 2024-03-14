@@ -228,5 +228,6 @@ a:hover, a:focus {
     margin-top: 12px;
     padding: 8px 40px;
     text-align: center;
+    cursor: pointer;
 }
 
