@@ -36,5 +36,10 @@ app.get('/', (req, res) => {
 
 app.use('/images', express.static(imagesDirectory));
 
+app.get('/about-images', (req, res) => {
+  res.render('about-images', { title: "About Image Creation and Attribution" });
+});
+
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
