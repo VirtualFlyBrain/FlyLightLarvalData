@@ -56,7 +56,7 @@ app.get('/explore/splits', (req, res) => {
         }
     });
 
-    res.render('splits', { thumbnails: imageFiles, searchQuery, title: 'Janelia FlyLight Larval Split Raw Images' });
+    res.render('index', { thumbnails: imageFiles, searchQuery, title: 'Janelia FlyLight Larval Split Raw Images' });
 });
 
 app.get('/explore/lexa', (req, res) => {
@@ -81,7 +81,7 @@ app.get('/explore/lexa', (req, res) => {
         }
     });
 
-    res.render('lexa', { thumbnails: imageFiles, searchQuery, title: 'Janelia FlyLight Larval Raw Images' , title: 'Janelia FlyLight Larval Raw Images' });
+    res.render('index', { thumbnails: imageFiles, searchQuery, title: 'Janelia FlyLight Larval Raw Images' , title: 'Janelia FlyLight Larval Raw Images' });
 });
 
 app.use('/images', express.static(imagesDirectory));
