@@ -15,7 +15,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup environment
-        run: echo "BRANCH=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+        run: |
+          BRANCH_NAME=${GITHUB_REF#refs/heads/}
+          BRANCH_NAME=${BRANCH_NAME#refs/tags/}
+          BRANCH_NAME=${BRANCH_NAME//\//-}
+          BRANCH_NAME=${BRANCH_NAME//_/-}
+          echo "BRANCH_NAME=$(echo $BRANCH_NAME | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            echo "DOCKER_TAG=latest" >> $GITHUB_ENV
+          else
+            echo "DOCKER_TAG=$BRANCH_NAME" >> $GITHUB_ENV
+          fi
       - name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
