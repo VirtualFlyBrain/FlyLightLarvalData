@@ -31,7 +31,57 @@ app.get('/explore', (req, res) => {
         }
     });
 
-    res.render('index', { thumbnails: imageFiles, searchQuery });
+    res.render('index', { thumbnails: imageFiles, searchQuery, title: 'Janelia FlyLight Larval LexA Raw Images' });
+});
+
+app.get('/explore/splits', (req, res) => {
+    const searchQuery = req.query.search?.toLowerCase() || '';
+    let imageFiles = [];
+
+    fs.readdirSync(imagesDirectory, { withFileTypes: true }).forEach(dir => {
+        if (dir.isDirectory() && (dir.name.includes('SS') || dir.name.includes('MB'))) {
+            let thumbnails = fs.readdirSync(path.join(imagesDirectory, dir.name))
+                                .filter(file => file.endsWith('.jpg'))
+                                .map(file => ({
+                                    name: file,
+                                    path: `/images/${dir.name}/${file}`,
+                                    dir: dir.name
+                                }));
+
+            if (searchQuery) {
+                thumbnails = thumbnails.filter(thumb => thumb.name.toLowerCase().includes(searchQuery));
+            }
+
+            imageFiles = imageFiles.concat(thumbnails);
+        }
+    });
+
+    res.render('splits', { thumbnails: imageFiles, searchQuery, title: 'Janelia FlyLight Larval Split Raw Images' });
+});
+
+app.get('/explore/lexa', (req, res) => {
+    const searchQuery = req.query.search?.toLowerCase() || '';
+    let imageFiles = [];
+
+    fs.readdirSync(imagesDirectory, { withFileTypes: true }).forEach(dir => {
+        if (dir.isDirectory() && !dir.name.includes('SS') && !dir.name.includes('MB')) {
+            let thumbnails = fs.readdirSync(path.join(imagesDirectory, dir.name))
+                                .filter(file => file.endsWith('.jpg'))
+                                .map(file => ({
+                                    name: file,
+                                    path: `/images/${dir.name}/${file}`,
+                                    dir: dir.name
+                                }));
+
+            if (searchQuery) {
+                thumbnails = thumbnails.filter(thumb => thumb.name.toLowerCase().includes(searchQuery));
+            }
+
+            imageFiles = imageFiles.concat(thumbnails);
+        }
+    });
+
+    res.render('lexa', { thumbnails: imageFiles, searchQuery, title: 'Janelia FlyLight Larval Raw Images' , title: 'Janelia FlyLight Larval Raw Images' });
 });
 
 app.use('/images', express.static(imagesDirectory));

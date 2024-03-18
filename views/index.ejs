@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <title>Janelia FlyLight Larval Raw Images</title>
+    <title><%= title %></title>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -40,16 +40,19 @@
       <div class="navbar-nav d-none d-lg-block">
         <div class="td-search">
           <div class="td-search__icon"></div>
-          <form action="/explore" method="GET">
+          <form id="searchForm" action="/explore" method="GET">
             <input type="text" name="search" value="<%= searchQuery %>" placeholder="Search Images...">
                 <button type="submit">Search</button>
                 <a href="/explore" class="clear-button">Clear</a>
             </form>
         </div>
       </div>
+      <script>
+        document.getElementById('searchForm').action = window.location.pathname;
+      </script>
     </nav>
     <h1>Janelia FlyLight Larval Raw Images</h1>
-    
+
     <div class="gallery">
     <% thumbnails.forEach(thumb => { %>
         <div class="thumbnail">
