@@ -13,6 +13,7 @@
   border: solid;
   border-width: thin;
   border-colour: white;
+  justify-content: center;
 }
 
 .thumbnail img {
